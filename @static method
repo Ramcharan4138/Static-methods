@@ -1,0 +1,22 @@
+'''static method @staticmethod '''
+class student:
+    gender='Male'
+    def __init__(s,name):
+        s.name=name
+    def display(s):
+        print("name:",s.name)
+    @classmethod
+    def getname(cls):
+        return cls.gender
+    @staticmethod
+    def resident(type_of_resident):
+        if type_of_resident=='Indian':
+            return "The personis indian"
+        else:
+            return "Non resident indian"
+name=str(input("Enter your name:"))
+type=input("Enter residant or non - resident:")
+s=student(name)
+s.display()
+print("Student name:",student.getname())
+print(s.resident(type))
